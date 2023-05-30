@@ -1,0 +1,71 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-expoexampleamplify-dev-231250-authRole",
+      "UnauthRoleArn": "arn:aws:iam::236509665435:role/amplify-expoexampleamplify-dev-231250-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::236509665435:role/amplify-expoexampleamplify-dev-231250-authRole",
+      "Region": "sa-east-1",
+      "DeploymentBucketName": "amplify-expoexampleamplify-dev-231250-deployment",
+      "UnauthRoleName": "amplify-expoexampleamplify-dev-231250-unauthRole",
+      "StackName": "amplify-expoexampleamplify-dev-231250",
+      "StackId": "arn:aws:cloudformation:sa-east-1:236509665435:stack/amplify-expoexampleamplify-dev-231250/50ce9060-fdc6-11ed-8cdc-06f51a86ca82",
+      "AmplifyAppId": "d31bw9c1jax6b9"
+    }
+  },
+  "auth": {
+    "expoexampleamplify25cbcd09": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-expoexampleamplify-dev-231250-deployment/amplify-cfn-templates/auth/expoexampleamplify25cbcd09-cloudformation-template.yml",
+        "logicalId": "authexpoexampleamplify25cbcd09"
+      },
+      "lastPushTimeStamp": "2023-05-29T02:17:39.783Z",
+      "output": {
+        "AppClientSecret": "12iqg9t7j1meqm6d14ib8ubf8qd3bfvb6ula8dh7nheae35r22vb",
+        "UserPoolId": "sa-east-1_78hdW7H3w",
+        "AppClientIDWeb": "6iqj5rk7mb15hsb7ger87fni44",
+        "AppClientID": "2nv11eh2n0b9hfma0kih6jkn8c",
+        "IdentityPoolId": "sa-east-1:16edf2a9-6409-4ba2-b749-006fdd2b6e3b",
+        "IdentityPoolName": "expoexampleamplify25cbcd09_identitypool_25cbcd09__dev",
+        "UserPoolName": "expoexampleamplify25cbcd09_userpool_25cbcd09"
+      },
+      "lastPushDirHash": "iCY1k7AKyZZ4yujZm+S9iOqoHZY="
+    }
+  },
+  "storage": {
+    "expoupload": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-expoexampleamplify-dev-231250-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+        "logicalId": "storageexpoupload"
+      },
+      "lastPushTimeStamp": "2023-05-29T02:17:39.783Z",
+      "output": {
+        "BucketName": "expouploads231250-dev",
+        "Region": "sa-east-1"
+      },
+      "lastPushDirHash": "MviF7NDUWfzXJAKD2DXI4pbbjRc="
+    }
+  }
+}

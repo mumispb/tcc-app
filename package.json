@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@aws-amplify/auth": "^4.3.11",
+    "@aws-amplify/core": "^4.3.3",
+    "@aws-amplify/storage": "^4.4.4",
+    "@react-native-async-storage/async-storage": "1.17.11",
+    "@react-native-community/netinfo": "9.3.7",
+    "aws-amplify": "^4.3.3",
+    "axios": "^1.4.0",
+    "expo": "^48.0.7",
+    "expo-clipboard": "~4.1.2",
+    "expo-constants": "~14.2.1",
+    "expo-image-picker": "~14.1.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.71.3",
+    "react-native-web": "~0.18.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3"
+  }
+}
