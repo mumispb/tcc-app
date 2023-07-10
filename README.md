@@ -1,21 +1,22 @@
-# AWS Amplify with Storage Example
+# Código do aplicativo usado no TCC
 
-This example demonstrates how to use the AWS Amplify to provision and use the APIs to capture image with Expo and, upload and download images with S3.
+Para rodar o aplicativo, é necessário instalar o Expo e todas as dependências
+que o Expo necessita. Para isso, primeiramente instale o Node.js e, em seguida, rode o comando abaixo:
 
-> Check out the [AWS Amplify](https://docs.amplify.aws/) docs.
+```bash
+npm install -g expo-cli
+```
 
-Try it at https://exp.host/@ykbryan/aws-storage-upload
+Após isso, entre na pasta do projeto e rode o comando abaixo para instalar todas as dependências:
 
-## How to use
+```bash
+npm install
+```
 
-### Setup AWS account
+Por fim, rode o comando abaixo para iniciar o aplicativo:
 
-- Create a new AWS account
-- Run `npm install -g @aws-amplify/cli` to install Amplify CLI
-- Run `amplify init` to initilise a new Amplify project
-- Run `amplify push` to deploy the Storage and Auth resources in AWS
+```bash
+expo start
+```
 
-### Running the app
-
-- Run `yarn` or `npm install`
-- Run `yarn start` or `npm run start` to try it out.
+Para rodar o aplicativo no celular, baixe o aplicativo Expo na Play Store ou App Store e escaneie o QR Code que aparecerá no terminal ou no navegador.
