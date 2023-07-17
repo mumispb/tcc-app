@@ -86,7 +86,7 @@ export default function App() {
       setHasUploaded(false);
 
       if (pickerResult.cancelled) {
-        alert("Upload cancelled");
+        // alert("Upload cancelado");
         return;
       } else {
         setPercentage(0);
@@ -99,7 +99,7 @@ export default function App() {
       }
     } catch (e) {
       console.log(e);
-      alert("Upload failed");
+      alert("Upload falhou");
     }
   };
 
@@ -164,6 +164,8 @@ export default function App() {
     }
   };
 
+  console.log({ hasUploaded, percentage });
+
   return (
     <View style={styles.container}>
       {/* <Text style={styles.title}>AWS Storage Upload Demo</Text> */}
@@ -187,7 +189,7 @@ export default function App() {
         Para utilizar, selecione uma imagem de uma folha de uma planta com
         alguma patologia de sua galeria ou tire uma nova foto.
       </Text>
-      {percentage !== 0 && !hasUploaded && (
+      {percentage !== 0 && !hasUploaded && percentage !== 100 && (
         <>
           <Lottie
             source={require("./assets/animation_lk6by1dw.json")}
@@ -251,16 +253,16 @@ export default function App() {
       )} */}
       <TouchableOpacity
         style={
-          !hasUploaded && percentage > 0
+          !hasUploaded && percentage > 0 && percentage < 100
             ? styles.disabledButton.container
             : styles.galeryButton.container
         }
         onPress={pickImage}
-        disabled={!hasUploaded && percentage > 0}
+        disabled={!hasUploaded && percentage > 0 && percentage < 100}
       >
         <Text
           style={
-            !hasUploaded && percentage > 0
+            !hasUploaded && percentage > 0 && percentage < 100
               ? styles.disabledButton.label
               : styles.galeryButton.label
           }
@@ -270,16 +272,16 @@ export default function App() {
       </TouchableOpacity>
       <TouchableOpacity
         onPress={takePhoto}
-        disabled={true}
+        disabled={!hasUploaded && percentage > 0 && percentage < 100}
         style={
-          !hasUploaded && percentage > 0
+          !hasUploaded && percentage > 0 && percentage < 100
             ? styles.disabledButton.container
             : styles.galeryButton.container
         }
       >
         <Text
           style={
-            !hasUploaded && percentage > 0
+            !hasUploaded && percentage > 0 && percentage < 100
               ? styles.disabledButton.label
               : styles.galeryButton.label
           }
