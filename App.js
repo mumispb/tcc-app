@@ -18,6 +18,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import awsconfig from "./aws-exports";
 import { Animated, Easing } from "react-native";
 import Lottie from "lottie-react-native";
+import { suggestions } from "./constants/class-names";
 // yellow box warnings - ignore them
 console.disableYellowBox = true;
 
@@ -26,6 +27,7 @@ Amplify.configure(awsconfig);
 const PREDICTION_INITIAL_STATE = {
   class: "",
   confidence: null,
+  suggestion: "",
 };
 
 export default function App() {
@@ -153,6 +155,7 @@ export default function App() {
       setPrediction({
         class: response.data.class,
         confidence: response.data.confidence,
+        suggestion: response.data.suggestion,
       });
     } catch (error) {
       console.log("Request failed");
@@ -228,6 +231,15 @@ export default function App() {
           <Text style={styles.class.label}>
             Confiança:{" "}
             <Text style={styles.class.value}>{prediction.confidence}</Text>
+          </Text>
+          <Text style={styles.class.label}>
+            Sugestão:{" "}
+            <Text style={styles.class.value}>
+              {
+                suggestions.find((item) => item.item === prediction.class)
+                  .suggestion
+              }
+            </Text>
           </Text>
         </View>
       )}
